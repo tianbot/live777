@@ -23,16 +23,8 @@ jobs:
         run: |
           ffmpeg -version
           ffprobe -version
-      - name: Install cargo-llvm-cov
-        uses: taiki-e/install-action@cargo-llvm-cov
-      - name: Generate code coverage
-        run: cargo llvm-cov --all --lcov --output-path lcov.info
-      - name: Upload coverage to codecov.io
-        uses: codecov/codecov-action@v4
-        with:
-          file: lcov.info
-          fail_ci_if_error: true
-          token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Run tests
+        run: cargo test --all --verbose
 
   e2e:
     needs: [test]
