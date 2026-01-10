@@ -63,7 +63,7 @@ export function PageHeader({ currentView, onNavigate, enabledTools }: PageHeader
                         src={Logo}
                         className="h-8 transition-[filter] duration-200 ease-in-out group-hover:drop-shadow-[0_0_1em_#1991e8aa]"
                     />
-                    <span class="text-xl font-bold">Live777</span>
+                    <span class="text-xl font-bold">Tianracer FPV</span>
                 </div>
 
                 {/* Navigation Tabs */}
