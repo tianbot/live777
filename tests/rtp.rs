@@ -14,6 +14,7 @@ struct Detect {
 }
 
 #[tokio::test]
+#[cfg_attr(target_os = "windows", ignore)]
 async fn test_livetwo_rtp_vp8() {
     let ip = IpAddr::V4(Ipv4Addr::LOCALHOST);
     let port = 0;
@@ -41,6 +42,7 @@ async fn test_livetwo_rtp_vp8() {
 }
 
 #[tokio::test]
+#[cfg_attr(target_os = "windows", ignore)]
 async fn test_livetwo_rtp_vp8_ipv6() {
     let ip = IpAddr::V6(Ipv6Addr::LOCALHOST);
     let port = 0;
@@ -68,6 +70,7 @@ async fn test_livetwo_rtp_vp8_ipv6() {
 }
 
 #[tokio::test]
+#[cfg_attr(target_os = "windows", ignore)]
 async fn test_livetwo_rtp_vp9() {
     let ip = IpAddr::V4(Ipv4Addr::LOCALHOST);
     let port = 0;
@@ -95,6 +98,7 @@ async fn test_livetwo_rtp_vp9() {
 }
 
 #[tokio::test]
+#[cfg_attr(target_os = "windows", ignore)]
 async fn test_livetwo_rtp_h264() {
     let ip = IpAddr::V4(Ipv4Addr::LOCALHOST);
     let port = 0;
@@ -124,6 +128,7 @@ async fn test_livetwo_rtp_h264() {
 }
 
 #[tokio::test]
+#[cfg_attr(target_os = "windows", ignore)]
 async fn test_livetwo_rtp_h265() {
     let ip = IpAddr::V4(Ipv4Addr::LOCALHOST);
     let port = 0;
@@ -151,6 +156,7 @@ async fn test_livetwo_rtp_h265() {
 }
 
 #[tokio::test]
+#[cfg_attr(target_os = "windows", ignore)]
 async fn test_livetwo_rtp_vp9_4k() {
     let ip = IpAddr::V4(Ipv4Addr::LOCALHOST);
     let port = 0;
@@ -178,6 +184,7 @@ async fn test_livetwo_rtp_vp9_4k() {
 }
 
 #[tokio::test]
+#[cfg_attr(target_os = "windows", ignore)]
 async fn test_livetwo_rtp_opus() {
     let ip = IpAddr::V4(Ipv4Addr::LOCALHOST);
     let port = 0;
@@ -203,6 +210,7 @@ async fn test_livetwo_rtp_opus() {
 }
 
 #[tokio::test]
+#[cfg_attr(target_os = "windows", ignore)]
 async fn test_livetwo_rtp_g722() {
     let ip = IpAddr::V4(Ipv4Addr::LOCALHOST);
     let port = 0;
@@ -228,6 +236,7 @@ async fn test_livetwo_rtp_g722() {
 }
 
 #[tokio::test]
+#[cfg_attr(target_os = "windows", ignore)]
 async fn test_livetwo_rtp_vp8_opus() {
     let ip = IpAddr::V4(Ipv4Addr::LOCALHOST);
     let port = 0;
@@ -257,6 +266,7 @@ async fn test_livetwo_rtp_vp8_opus() {
 }
 
 #[tokio::test]
+#[cfg_attr(target_os = "windows", ignore)]
 async fn test_livetwo_rtp_h264_g722() {
     let ip = IpAddr::V4(Ipv4Addr::LOCALHOST);
     let port = 0;

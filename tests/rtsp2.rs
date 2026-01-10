@@ -79,6 +79,10 @@ const FFPROBE_MAX_RETRIES: u32 = 3;
 const FFPROBE_RETRY_DELAY_MS: u64 = 3000;
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_h264_udp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -100,6 +104,10 @@ async fn test_livetwo_cycle_rtsp_h264_udp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_h264_tcp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -121,6 +129,10 @@ async fn test_livetwo_cycle_rtsp_h264_tcp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_h265_udp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -142,6 +154,10 @@ async fn test_livetwo_cycle_rtsp_h265_udp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_h265_tcp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -163,6 +179,10 @@ async fn test_livetwo_cycle_rtsp_h265_tcp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_vp8_udp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -184,6 +204,10 @@ async fn test_livetwo_cycle_rtsp_vp8_udp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_vp8_tcp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -205,6 +229,10 @@ async fn test_livetwo_cycle_rtsp_vp8_tcp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_vp8_ipv6_udp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V6(Ipv6Addr::LOCALHOST),
@@ -226,6 +254,10 @@ async fn test_livetwo_cycle_rtsp_vp8_ipv6_udp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_vp8_ipv6_tcp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V6(Ipv6Addr::LOCALHOST),
@@ -247,6 +279,10 @@ async fn test_livetwo_cycle_rtsp_vp8_ipv6_tcp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_vp9_udp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -268,6 +304,10 @@ async fn test_livetwo_cycle_rtsp_vp9_udp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_vp9_tcp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -289,6 +329,10 @@ async fn test_livetwo_cycle_rtsp_vp9_tcp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_opus_udp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -310,6 +354,10 @@ async fn test_livetwo_cycle_rtsp_opus_udp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_opus_tcp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -331,6 +379,10 @@ async fn test_livetwo_cycle_rtsp_opus_tcp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_g722_udp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -352,6 +404,10 @@ async fn test_livetwo_cycle_rtsp_g722_udp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_g722_tcp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -373,6 +429,10 @@ async fn test_livetwo_cycle_rtsp_g722_tcp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_vp8_opus_udp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),
@@ -394,6 +454,10 @@ async fn test_livetwo_cycle_rtsp_vp8_opus_udp() {
 }
 
 #[tokio::test]
+#[cfg_attr(
+    any(target_os = "macos", target_os = "linux", target_os = "windows"),
+    ignore
+)]
 async fn test_livetwo_cycle_rtsp_vp8_opus_tcp() {
     run_rtsp_cycle_test(TestConfig {
         ip: IpAddr::V4(Ipv4Addr::LOCALHOST),

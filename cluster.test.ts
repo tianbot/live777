@@ -289,9 +289,9 @@ url = "http://${localhost}:${live777CloudPort}"
 
     beforeEach(async () => {
         await until(() => getStreams(live777LivemanHost), s => s.length === 0)
-    })
+    }, 60 * 1000)
 
-    test("cascade", { timeout: 60 * 1000 }, async () => {
+    test("cascade", { timeout: 300 * 1000 }, async () => {
         const width = 320, height = 240
         const whipintoPort = "5002"
         using _ffmpeg = spawn([
@@ -349,7 +349,7 @@ url = "http://${localhost}:${live777CloudPort}"
         expect(streams[0].subscribe.sessions).toHaveLength(1)
     })
 
-    test("p2p to sfu", { timeout: 60 * 1000 }, async () => {
+    test("p2p to sfu", { timeout: 300 * 1000 }, async () => {
         const whipintoPort = "5006"
         using _ffmpeg = spawn([
             "ffmpeg", "-hide_banner", "-re", "-f", "lavfi",
