@@ -36,6 +36,7 @@ jobs:
           - { target: x86_64-unknown-linux-musl   , os: ubuntu-24.04, use-cross: true, nfpm: amd64 }
     env:
       BUILD_CMD: cargo
+      BUILD_NDK: ""
       EXE_SUFFIX: ""
       PKG_LIVE777_NAME: ""
       PKG_LIVEMAN_NAME: ""
