@@ -66,7 +66,7 @@ jobs:
         run: |
           VERSION=${GITHUB_REF_NAME}
           if expr "${VERSION}" : '[^0-9]*$' > /dev/null; then
-            VERSION=`git describe --tags`
+            VERSION=`git describe --tags --always`
           fi
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
           echo "version is: ${VERSION}"
